@@ -9,7 +9,7 @@ library(igraph)
 library(RColorBrewer)
 
 #set the current working directory
-setwd("/Users/Yixi/Drive/Conference/COMPON-ALL Meetings/scripts/Egonet_Compon")
+setwd("/Users/.../Egonet_Compon")
 
 #load the RData file saved from EgoNet_analysis.R
 load("./output/EgoNet_analysis.RData")

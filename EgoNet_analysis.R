@@ -3,7 +3,7 @@ library('egor')
 
 #set the current working directory
 #Note! Please change the directory to your own path to the Egonet_Compon folder!
-setwd("/Users/Yixi/Drive/Conference/COMPON-ALL Meetings/scripts/Egonet_Compon")
+setwd("/Users/.../Egonet_Compon")
 
 #load in the org_codebook with attribute data
 #in the example data file, the attribute is the "scale" column for political scales
@@ -14,7 +14,7 @@ nodelist <- nodelist[,-1] #drop the first column
 nodelist$sector <- substr(nodelist$org_code, 1, 3)
 
 
-# now, let's use influence network as the example to demonstrate
+#let's use influence network as the example to demonstrate
 
 #read in the network data
 infl_data <- read.xlsx("./output/influence_edgelist.xlsx", 1)
@@ -176,7 +176,8 @@ EI_table_sector <- merge(EI_infl_sector, infl_net$ego[, c("org_code", ".egoID", 
 EI_avg_sector <- EI_table_sector %>% group_by(sector) %>% summarise(Influ_EI = mean(Influ_EI))
 write.xlsx(EI_avg_sector, "./output/egonet_descriptives.xlsx",
            sheetName = "EI_avg_sector", append = T, showNA=FALSE)
-
+write.xlsx(EI_table_sector, "./output/egonet_descriptives.xlsx",
+           sheetName = "EI_table_sector", append = T, showNA=FALSE)
 
 #repeat the process for scale
 EI_infl_scale <- comp_ei(infl_net, "scale", "scale")
@@ -185,6 +186,8 @@ EI_table_scale <- merge(EI_infl_scale, infl_net$ego[, c("org_code", ".egoID", 's
 EI_avg_scale <- EI_table_scale %>% group_by(scale) %>% summarise(Influ_EI = mean(Influ_EI))
 write.xlsx(EI_avg_scale, "./output/egonet_descriptives.xlsx",
            sheetName = "EI_avg_scale", append = T, showNA=FALSE)
+write.xlsx(EI_table_scale, "./output/egonet_descriptives.xlsx",
+           sheetName = "EI_table_scale", append = T, showNA=FALSE)
 
 #save the R workspace
 save.image("./output/EgoNet_analysis.RData")
