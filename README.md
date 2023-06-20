@@ -4,18 +4,18 @@ Scripts for data cleaning, analysis, and visualization using ego network analysi
 ## clean_data.py
 Converts policy network nomination survey data into edgelist.
 
-example survey data
+example **survey data**
 |      |GOV19|POL006|GOV007|
 |------|-----|------|------|
-|NGO001|	1,2,3|1|2,3|
-|NGO006| | |1|		
+|NGO001|1,2,3|1     |2,3   |
+|NGO006|     |      |1     |		
 
-example edgelist (relationship type 1)
+example **dgelist** (for relationship type 1)
 | ego | alter | relationship type|
-| -------- | ------- |------- |
-|NGO001	|GOV019	|1|
-|NGO001|	POL006|	1|
-|NGO006|	GOV007|	1|
+| ----| ----- |------- |
+|NGO001|GOV019|1|
+|NGO001|POL006|1|
+|NGO006|GOV007|1|
 
 
 ## EgoNet_analysis.R
@@ -24,16 +24,16 @@ Performs descriptive Ego-centric network analysis, primarily using the *egor* li
 Density
 | egoID | density |
 | -------- | ------- |
-| 1  | 0.4   |
-| 2 | 0     |
-| 3    | 0.1666    |
+| 1  | 0.4|
+| 2 | 0 |
+| 3 | 0.1666|
 
 Composition
 | egoID| ENG |GOV|INT|NGO|POL|RES|UNI
-| -----| ----|---|---|---|---|---|---|
-|1		 |83.33|	 |	|16.67|   |   |   |
-|2		 ||	25 |	||   |  50 |  25 |
-|3		 ||	 |69.23	|| 15.38  |   | 15.38  |
+|-----|----|---|---|---|---|---|---|
+|1|83.33|	 |	|16.67|   |   |   |
+|2||	25 |	||   |  50 |  25 |
+|3||	 |69.23	|| 15.38  |   | 15.38  |
 
 Ego–Alter homophily
 | egoID | EI index |
