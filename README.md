@@ -19,7 +19,7 @@ example **dgelist** (for relationship type 1)
 
 
 ## EgoNet_analysis.R
-Performs descriptive Ego-centric network analysis, primarily using the *egor* library:
+Performs descriptive Ego-centric network analysis, primarily using the `egor` library:
 
 Density
 | egoID | density |
@@ -46,17 +46,17 @@ Ego–Alter homophily
 ## EgoNet_visualization.R
 Produces visualizations:
 
-circled bar chat for nomination counts (by group, e.g., sector/political scale)
+Circled bar chat for nomination counts (by group, e.g., sector/political scale)
 ![support_n](https://github.com/yixiyang21/EgoNet-COMPON/assets/52981994/318e2a6d-18e6-459c-800f-cfc3fda08de4)
 
-stacked bar chart for network composition (by group, e.g., sector/political scale)
+Stacked bar chart for network composition (by group, e.g., sector/political scale)
 ![composition](https://github.com/yixiyang21/EgoNet-COMPON/assets/52981994/1508c3f8-8ff8-47a1-85e7-fd7cbd57c2de)
 
-individual participant's ego-centric network
+Individual ego network plot
 
 ![sci2](https://github.com/yixiyang21/EgoNet-COMPON/assets/52981994/08802839-eddd-4819-9074-bc927634554f)
 
-egograms
+Egogram (plots actor attributes like sector & political scale, alters, alter–alter ties in one graph)
 
 ![sci_info3_2](https://github.com/yixiyang21/EgoNet-COMPON/assets/52981994/10dde301-17e0-4556-9b45-d7e79f673e6f)
 
