@@ -10,7 +10,7 @@ example **survey data**
 |NGO001|1,2,3|1     |2,3   |
 |NGO006|     |      |1     |		
 
-example **dgelist** (for relationship type 1)
+example **edgelist** (for relationship type 1)
 | ego | alter | relationship type|
 | ----| ----- |------- |
 |NGO001|GOV019|1|
